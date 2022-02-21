@@ -1,0 +1,28 @@
+
+<h2 style="color: greenyellow;">Registro completado</h2> <h2>Sera redirigido a la pagina principal en: <span id="seconds">5</span> segundos.
+</h2>
+<script>
+  var seconds = 5;
+  var foo; 
+  
+  function redirect() {
+      document.location.href = '/';
+  }
+  
+  function updateSecs() {
+      document.getElementById("seconds").innerHTML = seconds;
+      seconds--;
+      if (seconds == -1) {
+          clearInterval(foo);
+          redirect();
+      }
+  }
+  
+  function countdownTimer() {
+      foo = setInterval(function () {
+          updateSecs()
+      }, 1000);
+  }
+  
+  countdownTimer();
+  </script>

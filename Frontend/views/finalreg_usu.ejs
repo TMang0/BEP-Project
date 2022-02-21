@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEP - Experiencias</title>
+        <link rel="stylesheet" href="css/formularioEmpresa.css">
+</head>
+    <body>
+        <div class="container">
+            <div class="title">Tu Futuro Empieza Hoy</div>
+            <div class="content">
+                <form action="/terminarRegistro2" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="_id" value="<%= id %>">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Nombre</span>
+                            <input type="text" placeholder="Enter your name" name="nombreusu" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Apellido</span>
+                            <input type="text" placeholder="Enter your username" name="apellidousu" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Celular</span>
+                            <input type="number" placeholder="Enter your number" name="telefono" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Direccion</span>
+                            <input type="text" placeholder="Direccion" name="direccion" required>
+                        </div>
+                    </div>
+                    <hr>
+                    <hr>
+                    <div class="gender-details">
+                        <span class="gender-title">Areas de Interes de la Compañia</span>
+                        <div class="categoria">
+                            <div>
+                                <select name="areaDesempena" id="">
+                                    <option value="Finanzas y Administracion">Finanzas y Administracion</option>
+                                    <option value="Ciencias Aplicadas y Relacionadas">Ciencias Aplicadas y Relacionadas
+                                    </option>
+                                    <option value="Salud">Salud</option>
+                                    <option value="Ventas y Servicios">Ventas y Servicios</option>
+                                    <option value="Explotacion Primaria y Extractiva">Explotacion Primaria y Extractiva
+                                    </option>
+                                    <option value="Operación de Equipos de Transporte">Operación de Equipos de
+                                        Transporte</option>
+                                    <option value="Procesamiento de Fabricacion y Ensamble">Procesamiento de Fabricacion
+                                        y Ensamble</option>
+                                    <option value="Vigilancia y Seguridad">Vigilancia y Seguridad</option>
+                                </select><br>
+                            </div>
+
+                            <div>
+                                <textarea name="" id="" cols="90" rows="5" placeholder="Cuentanos Sobre ti"
+                                    class="texto" style="margin-top: 10px;" name="comentario"></textarea>
+                            </div>
+                            <div>
+                                <br>
+                                <input type="file" name="avatar"> Adjunta Tu Hoja de Vida
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <input type="checkbox" id="check" name="tac" value="true">
+                        Acepto los <a href="/T&C">Terminos y condiciones</a>
+                        <br>
+                        <input type="hidden" name="nuevo" value="false">
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

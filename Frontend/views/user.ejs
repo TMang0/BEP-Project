@@ -1,0 +1,23 @@
+               <%- include('head_login'); %>
+                <div class="m-4">
+                <table class="table">
+                    <% for(var i=0; i<empleo.length; i++){ n=+ i %>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><%= n+1 %> </th>
+                        <td><%= empleo[i].trabajoNombre %></td>
+                        <td><%= empleo[i].duracion %></td>
+                        <td><%= empleo[i].categoria %></td>
+                        <td><%= empleo[i].descripcion %></td>
+
+                        <td>
+                            <a href="#">Aplicar</a>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <% } %>
+                  </table>
+                </div>
+
+            </body>
+</html>

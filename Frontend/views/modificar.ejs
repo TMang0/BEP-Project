@@ -1,0 +1,54 @@
+
+<% if(nuevo == false){ %>
+  <%- include('test'); %>  
+<body>
+<div class="container">
+  <div class="title">Modificar datos</div>
+  <div class="content">
+    <form action="/modificar" method="post">
+      <div class="user-details">
+        <input type="hidden" name="id" value="<%= res._id %>" >
+        <div class="input-box">
+          <span class="details">Nombre del trabajo</span>
+          <input type="text" placeholder="Nombre del trabajo" name="trabajoNombre" value="<%= res.trabajoNombre %>" required>
+        </div>
+        <div class="input-box">
+          <span class="details">Duración</span>
+          <input type="text" placeholder="Duración" name="duracion" value="<%= res.duracion %>" required>
+        </div>
+        <div class="input-box" style="width: 100%;">
+          <span class="details">Correo electronico</span>
+          <input type="text" placeholder="Email" name="email" value="<%= res.email %>" required>
+        </div>
+        <div class="gender-details">
+          <span class="details">Categoria</span>
+          <div class="categoria">
+            <div>
+              <select name="categoria" id="">
+                <option <%= (res.categoria == "Finanzas y Administracion")? "selected":"" %> value="Finanzas y Administracion">Finanzas y Administracion</option>
+                <option <%= (res.categoria == "Ciencias Aplicadas y Relacionadas")? "selected":"" %> value="Ciencias Aplicadas y Relacionadas">Ciencias Aplicadas y Relacionadas</option>
+                <option <%= (res.categoria == "Salud")? "selected":"" %> value="Salud">Salud</option>
+                <option <%= (res.categoria == "Ventas y Servicios")? "selected":"" %> value="Ventas y Servicios">Ventas y Servicios</option>
+                <option <%= (res.categoria == "Explotacion Primaria y Extractiva")? "selected":"" %> value="Explotacion Primaria y Extractiva">Explotacion Primaria y Extractiva</option>
+                <option <%= (res.categoria == "Operación de Equipos de Transporte")? "selected":"" %> value="Operación de Equipos de Transporte">Operación de Equipos de Transporte</option>
+                <option <%= (res.categoria == "Procesamiento de Fabricacion y Ensamble")? "selected":"" %> value="Procesamiento de Fabricacion y Ensamble">Procesamiento de Fabricacion y Ensamble</option>
+                <option <%= (res.categoria == "Vigilancia y Seguridad")? "selected":"" %> value="Vigilancia y Seguridad">Vigilancia y Seguridad</option>
+              </select><br>
+            </div>
+            <div class="margtop">
+            <span class="details">Descripción del trabajo</span>
+            <textarea style="margin-top: 10px;" name="descripcion" id="" cols="90" rows="5"
+              placeholder="Descripción" class="texto"><%= res.descripcion %></textarea>
+            </div>
+          </div>
+      <hr>
+      <hr>
+      <div class="button centerbtn">
+        <input type="submit" value="Enviar">
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
+<% } %>
