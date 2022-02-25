@@ -21,3 +21,5 @@ Tecnologias usadas:
 - CRUD en las vistas de Empresa
 
 ## Hecho con mucho amor 💚
+
+*Cualquier uso comercial debera ser avisado al creador del repo*
